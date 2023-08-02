@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vis Forbes by Yijun</title>
+    <script type="text/javascript" src="script.js"></script>  
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body onload=main()>
+    <h1>Understanding Forbes Billionaires by Visualizations</h1>
+    <h3 class="textintro">Welcome to the visualization of Forbes Billionaires Ranking!</h3>
+    <p class="textintro">
+        As we slowly stepping out the shadow of the COVID-19 pandemic, 
+        the global economy starts to show signs of recovery, while still lingering with challenges. 
+        One industry that has experienced a significant impact is the IT sector, which has witnessed widespread layoffs and downsizing measures. 
+        Unfortunately, other industries have also faced uncertain prospects during these times. 
+        It is against this backdrop that the release of Forbes' billionaires ranking for 2023 in April becomes particularly intriguing. 
+        This prestigious list not only highlights the extraordinary wealth amassed by individuals but also serves as a barometer for the state of the economy. 
+        The fluctuation in rankings can provide valuable insights into the economic landscape, revealing the effects of the recent turbulence and offering a glimpse into the resilience and adaptability of the world's wealthiest individuals. 
+        Join us as we explore this captivating visualization, delving into the correlation between billionaire rankings and the ever-evolving economic conditions.
+    </p>
+    <p class="textintro">
+        On this web page, I offer you a remarkable journey through a vast sea of data, transforming the traditionally mundane ranking table into a captivating visual experience. 
+        With thousands of rows scraped from Forbes' official website using Python, I have aggregated and transformed the data into visually engaging representations that provide a comprehensive understanding of this ranking.
+        Through various types of visualizations, I offer you a fresh perspective on the world of billionaires. 
+        My aim is to present a holistic view of the rankings, going beyond mere numbers to unravel the captivating stories behind the ranking.
+        Join us as we delve into these visualizations, exploring different dimensions and uncovering patterns, trends, and outliers. 
+        Gain a deeper understanding of the dynamics of wealth distribution, industry dominance, geographical representation, and more. 
+        Prepare to be mesmerized by the power of data visualization as we unravel the intriguing stories behind the rankings and shed light on the captivating world of billionaires.
+    </p>
+    <p class="textintro" style="padding-bottom: 50px;">
+        You can use the Menu buttons to jump between each part, or you can scroll down naturally.
+    </p>
+    
+
+
+
+    <h2 id ="menu">Menu</h2>
+    <div id="menu">
+        <button onclick="jumpToSection('ranking')" class="button">Top 20 Billionaires</button>
+        <button onclick="jumpToSection('bynation')" class="button">Perspective of Countries and Industries</button>
+        <button onclick="jumpToSection('choropleth')" class="button">Location Distribution of U.S. Billionaires</button>
+        <button onclick="jumpToSection('connection')" class="button">Connections between Billionaires</button>
+        <!-- <button onclick="jumpToSection('conclusion')" class="button">Conclusion</button> -->
+
+
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    
+    
+    <div id="ranking">
+        <h2>Comparing Top 20 Billionaires in 2022 and 2023</h2>
+        <p class="textintro">
+            The world's richest person in 2022 is Elon Musk with 219 billion USD, but in April 2023, it has become Bernard Arnault with 211 billion USD. 
+            Elon's wealth shrinks to 180 billion USD. This decline not only happen to Elon alone, but also Jeff Bezos, Warren Buffett, Bill Gates, etc as you can compare in the bar chart.
+            The shrink of wealth for IT billionaires corresponds with the general depression in IT industry. <br><br>
+            The following two chart select top 20 billionaires in 2022 and 2023. As you explore the barchart, 
+            you will notice the billionaire you selected will be highlighted in yellow in both chart and the other billionaires who come from the same country as the selcted will be highlighted in navy.
+        </p>
+        <div class="topBillionOverview">
+            <div id="v1_plot"></div>
+            <div id="v2_plot"></div>
+        </div>
+        <div class="progressSelection">
+            <div><button onclick="jumpToSection('menu')" class="button">Back to Menu</button></div>
+            <div><p>Or Continue</p></div>
+        </div>
+        
+    </div>
+    
+    
+    <div id="bynation">
+        <h2>Exploring Ranking from Perspective of Countries and Industries </h2>
+        <p class="textintro">
+            Let's now explore the aggregated 2023 Forbes Billionaire Ranking from the perspective of countries.<br>
+        </p>
+        <div class="plot_text">
+            <div id="v3_plot"></div>
+            <div><p class="textintro"> The wealth of billionaires in each country is summed up. And Top20 countries is displayed here. That is, 
+            the summed wealth of billionaires from United States is all together 4491 billion US Dollar, being the highest among the world.
+            The second place come to China with 2155 billion US Dollar, etc. This order kinda reflect GDP ranking, but it is also different in some sense.
+            <br><br> Scroll Down to Continue..</p></div>
+        </div>
+        <br>
+        <br>
+
+        <div class="plot_text">
+            <div id="v3_stackedplot"></div>
+            <div><p class="textintro">
+                Knowing wealth of billionaires summed by each country. People starts to be curious about what industry does those
+                billionaires belongs to. What are their source that helps them make money?<br>
+                In this stacked bar chart, you can find out, in each country, what are the summed wealth of billionaires for each industry.
+                <br><br>
+                As demonstrate in the graph, Finance and Technology are the two industries with highest proportion of billionaire's total wealth in U.S.
+                This means in U.S. one major group of the most richest group of people make their money by Finance and Technology. And these two are the best field to make the most money.
+                This reflects the economic structure of U.S. Like Finance and Technology to U.S.; for China, it is Manufacturing and Technnology; 
+                for France, it is Fashion; For Russia, it is Energy and Mining. 
+                We can surely say that the composition of billionaires in each country highly resonate with the country's economic strength.
+                <br><br> Scroll Down to Continue..
+            </p></div>
+
+        </div>
+    
+        <div class="plot_text">
+            <div id="v4_plot"></div>
+            <div><p class="textintro">
+                The above bar chart has shown the summed wealth of billionaires in the top 20 countries. This bar chart instead 
+                show the number of billionaires in each country. The countries in this chart is almost the same with the above.
+                But we can also observed the wealth of billionaires in each country are highly different. U.S. has 735 billionaires,
+                China has 614 billionaires, but the total wealth of U.S. billionaires is almost twice than that of Chinese billionaires.
+            </p></div>
+        </div>
+        
+
+
+        <div class="progressSelection">
+            <div><button onclick="jumpToSection('menu')" class="button">Back to Menu</button></div>
+            <div><p>Or Continue</p></div>
+        </div>
+    </div>
+
+
+
+    <div id="choropleth">
+        <h2>Which State Has the Most Billionaires?</h2>
+        <div class="usBillionaire">
+            <div id="usbillionaireplot"></div>
+            <span id="listPersonName"></span>
+        </div>
+
+
+
+        <div class="progressSelection">
+            <div><button onclick="jumpToSection('menu')" class="button">Back to Menu</button></div>
+            <div><p>Or Continue</p></div>
+        </div>
+    </div>
+    
+
+    <div id ='connection'>
+        <h2>Connection Between Billionaires</h2>
+
+        <div class="plot_text">
+            <div id="network"></div>
+            <div><p class="textintro">
+                This node link diagram shows the connection between top 20 world billionaires in 2023 ranking. 
+                Color of node identify their countries. Size of node shows their net wealth. If two billionaires work in
+                same industry, they will be connected by edges. The thickness of edges demonstrate the strength of connection.
+                If two billionaires work in same industry and they come from the same country, their connection will be stronger.
+            </p></div>
+        </div>
+
+        
+
+        <div class="progressSelection">
+            <div><button onclick="jumpToSection('menu')" class="button">Back to Menu</button></div>
+            <div><p>Or Continue</p></div>
+        </div>
+    </div>
+
+    <!-- <div id="conclusion">
+        <h2>Conclusion</h2>
+        <p class="textintro"></p>
+    </div> -->
+    
+    
+    
+
+    <p id="signature">Yijun Luo &emsp;&emsp; June 2023 DSC106</p>
+    <script>
+        function jumpToSection(id) {
+          const element = document.getElementById(id);
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+
+
+  
+</html>
