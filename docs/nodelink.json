@@ -1,0 +1,190 @@
+{
+    "nodes":
+    [{"name": "Bernard Arnault & family", "value": 211.0, "industry": "Fashion & Retail", "id": 1,"country": "France"},
+{"name": "Elon Musk","value": 180.0,"industry": "Automotive","id": 2, "country": "United States"},
+{"name": "Jeff Bezos","value": 114.0,"industry": "Technology","id": 3,"country": "United States"},
+{"name": "Larry Ellison","value": 107.0,"industry": "Technology","id": 4,"country": "United States"},
+{"name": "Warren Buffett","value": 106.0,"industry": "Finance & Investments","id": 5,"country": "United States"},
+{"name": "Bill Gates","value": 104.0,"industry": "Technology","id": 6,"country": "United States"},
+{"name": "Michael Bloomberg","value": 94.5,"industry": "Media & Entertainment","id": 7,"country": "United States"},
+{"name": "Carlos Slim Helu & family","value": 93.0,"industry": "Telecom","id": 8,"country": "Mexico"},
+{"name": "Mukesh Ambani","value": 83.4,"industry": "Diversified","id": 9,"country": "India"},
+{"name": "Steve Ballmer","value": 80.7,"industry": "Technology","id": 10,"country": "United States"},
+{"name": "Francoise Bettencourt Meyers & family","value": 80.5,"industry": "Fashion & Retail","id": 11,"country": "France"},
+{"name": "Larry Page","value": 79.2,"industry": "Technology","id": 12,"country": "United States"},
+{"name": "Amancio Ortega","value": 77.3,"industry": "Fashion & Retail","id": 13,"country": "Spain"},
+{"name": "Sergey Brin","value": 76.0,"industry": "Technology","id": 14,"country": "United States"},
+{"name": "Zhong Shanshan","value": 68.0,"industry": "Food & Beverage","id": 15, "country": "China"},
+{"name": "Mark Zuckerberg","value": 64.4,"industry": "Technology","id": 16,"country": "United States"},
+{"name": "Charles Koch","value": 59.0,"industry": "Diversified","id": 17,"country": "United States"},
+{"name": "Julia Koch & family","value": 59.0,"industry": "Diversified","id": 18,"country": "United States"},
+{"name": "Jim Walton","value": 58.8,"industry": "Fashion & Retail","id": 19, "country": "United States"},
+{"name": "Rob Walton","value": 57.6,"industry": "Fashion & Retail","id": 20, "country": "United States"}],
+
+"edges":[
+    { "source": 1, 
+    "target": 11,
+    "value": 3},
+    { "source":  1, 
+    "target": 13,
+    "value": 2},
+    { "source": 1,
+    "target": 19 ,
+    "value": 2},
+    { "source": 1, 
+    "target": 20,
+    "value": 2},
+
+    { "source":  11, 
+        "target": 13,
+        "value": 2},
+        { "source": 11,
+        "target": 19 ,
+        "value": 2},
+        { "source": 11, 
+        "target": 20,
+        "value": 2},
+
+    { "source":  13, 
+    "target": 20,
+    "value": 2},
+    { "source": 13, 
+    "target": 20,
+    "value": 2},
+
+    { "source":  19, 
+        "target": 20,
+        "value": 3},
+
+
+
+    {
+        "source":3,
+        "target":4,
+        "value":3
+    },
+    {
+        "source":3,
+        "target":6,
+        "value":3
+    },
+    {
+        "source":3,
+        "target":10,
+        "value":3
+    },
+    {
+        "source":3,
+        "target":12,
+        "value":3
+    },
+    {
+        "source":3,
+        "target":14,
+        "value":3
+    },
+    {
+        "source":3,
+        "target":16,
+        "value":3
+    },
+
+    
+    {
+        "source":4,
+        "target":6,
+        "value":3
+    },
+    {
+        "source":4,
+        "target":10,
+        "value":3
+    },
+    {
+        "source":4,
+        "target":12,
+        "value":3
+    },
+    {
+        "source":4,
+        "target":14,
+        "value":3
+    },
+    {
+        "source":4,
+        "target":16,
+        "value":3
+    },
+
+    {
+        "source":6,
+        "target":10,
+        "value":3
+    },
+    {
+        "source":6,
+        "target":12,
+        "value":3
+    },
+    {
+        "source":6,
+        "target":14,
+        "value":3
+    },
+    {
+        "source":6,
+        "target":16,
+        "value":3
+    },
+
+    {
+        "source":10,
+        "target":12,
+        "value":3
+    },
+    {
+        "source":10,
+        "target":14,
+        "value":3
+    },
+    {
+        "source":10,
+        "target":16,
+        "value":3
+    },
+
+    {
+        "source":12,
+        "target":14,
+        "value":3
+    },
+    {
+        "source":12,
+        "target":16,
+        "value":3
+    },
+    {
+        "source":14,
+        "target":16,
+        "value":3
+    },
+
+    {
+        "source":9,
+        "target":17,
+        "value":2
+    },
+    {
+        "source":9,
+        "target":18,
+        "value":2
+    },
+    {
+        "source":17,
+        "target":18,
+        "value":3
+    }
+
+]
+
+}
